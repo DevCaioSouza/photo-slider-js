@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+      function showProducts(){
+      var prodName=document.getElementById("prodName");
+      var pic = document.getElementById("pic");
+      var txtRange = document.getElementById("txtRange");
+      
+      var productNames=["Dog", "Fork", "Sea", "Table"];
+      var productImages=["dog.jpg", "fork.jpg", "sea.jpg", "table.jpg"]   
+      prodName.innerHTML = productNames[txtRange.value];
+      pic.src=productImages[txtRange.value];
+    }
+  </script>  
+  
+ 
+</head>
+<body>
+<div>
+  <table width="500" border="2" align="center">
+    <tr>
+      <td align="center" id="prodName"></td>
+    </tr>
+    <tr>
+      <td>
+        <img src="dog.jpg" id="pic" alt="pics">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="range" 
+        id="txtRange" 
+        min="0" max="3" 
+        value="0" onchange="showProducts()">
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+
+</body>
+</html>
